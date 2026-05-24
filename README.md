@@ -2,7 +2,7 @@
 This is personal learning project for AI engineer.
 
 # Ubuntu 22.04 Environment Setup
-- curl -fsSL https://ollama.com/install.sh | sh
+- curl -fsSL https://ollama.com/install.sh | sh  # Ollama is open source, locally-running large language model, as kind of "local ChatGPT"
 - systemctl status ollama
 - ollama pull qwen2.5-coder:7b
 
