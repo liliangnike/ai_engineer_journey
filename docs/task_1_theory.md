@@ -16,3 +16,9 @@
 
      - 工程权衡
        上下文越长，Token消耗越大，延迟越高。需要学会何时清空或者剪裁历史对话。
+
+
+# Summary of task 1.2 - 01_foundation/task_1_2_first_ai_chat.py
+    
+  This is first AI chat practice Python source code. It is local 'ChatGPT'.
+  (Ollama responses slowly - might be due to there is no GPU in my Linux workstation.)
