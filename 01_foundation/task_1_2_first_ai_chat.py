@@ -5,8 +5,9 @@ client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 
 # Initialize chat context
 messages = [
-        {"role" : "system",
-         "content" : "You are a senior C++ and Python expert. Your answer should be concise and accurate, also can provide high performance example code."
+        {
+            "role" : "system",
+            "content" : "You are a senior C++ and Python expert. Your answer should be concise and accurate, also can provide high performance example code."
         }
 ]
 
