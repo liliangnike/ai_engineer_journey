@@ -18,7 +18,7 @@
        上下文越长，Token消耗越大，延迟越高。需要学会何时清空或者剪裁历史对话。
 
 
-# Summary of task 1.2 - 01_foundation/task_1_2_first_ai_chat.py
+# Summary of task 1.2 - 01_foundation/first_ai_chat.py
     
   This is first AI chat practice Python source code. It is local 'ChatGPT'.
   (Ollama responses slowly - might be due to there is no GPU in my Linux workstation.)
@@ -37,3 +37,6 @@
        这是实现AI Agent的基础。没有它，AI只是聊天机器人；有了它，AI可以操作你的系统、查询git commits、发送邮件等等。
      - 防御性工程：
        作为AI开发者，必须学会校验AI返回的函数名和参数(熟悉接口)。
+
+# Summary of task 1.3 - 01_foundation/function_calling.py
+       Function Calling is that LLM returns specific JSON data then code parses the JSON to trigger local function calling. AI and local function co-working is implemented.
