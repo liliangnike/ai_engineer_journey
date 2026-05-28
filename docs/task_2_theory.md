@@ -8,3 +8,7 @@ RAG三大逻辑步骤：
 
   3. 检索(Retrieval): 当你问问题时，系统会将你的问题向量化，然后去数据库里查找距离最近的段落。把这几个段落和你的问题一起送给LLM。
 
+三种主流解决方案：
+  1. Term-Keyword Hybrid Search
+  2. Metadata Enrichment
+  3. Knowledge Graph
