@@ -2,7 +2,7 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 # 1. Initialize Vector Databse
-client = chromadb.Client()
+client = chromadb.PersistentClient(path="./vector_db")
 collection = client.create_collection("company_knowledge")
 
 # 2. Load Embedding Model (small, efficient, local)
