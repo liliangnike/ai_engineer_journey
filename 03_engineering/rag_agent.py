@@ -11,7 +11,10 @@ class RAGAgent:
 
     def get_answer(self, user_prompt):
         query_vector = self.model.encode(user_prompt).tolist()
-        results = self.collection.query(query_embeddings = [query_vector], n_results = 2)
+        results = self.collection.query(query_embeddings = [query_vector], n_results = 1, include = ['documents', 'distances'])
+        if results['distances'][0][0] > 1.0:
+            return "Sorry, I did not find any information about your question."
+
         context = "\n".join(results['documents'][0])
 
         system_instruction = "You are a helpful assistant. Use the following context to answer the user question. If the answer is not in the context, say you don't know."
