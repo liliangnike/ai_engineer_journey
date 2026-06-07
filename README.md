@@ -12,7 +12,17 @@ This is personal learning project for AI engineer.
 - pip install --upgrade pip
 - pip install openai pydantic
 - pip install chromadb sentence-transformers    # Task 2.2, RAG vector database
+- pip install fastapi uvicorn
 
 # Environment Re-check
 - curl http://localhost:11434/api/tags ( If "{"models":[{"name":"qwen2.5-coder:7b",...}]}" was found, environment is okay )
 - python3 -c "import openai; from pydantic import BaseModel; print('Environment dependencies check is pass.')"
+
+
+# Folder Structure
+- 01_foundation: AI foundations
+- 02_rag: RAG basic knowledge and pipeline
+- 03_engineering: Implementation of the RAG agent and API service
+
+# Setup & Usage
+- RAG agent and API service: Please refer to `03_engineering/README.md` for specific deployment instructions
