@@ -21,7 +21,8 @@ class RAGAgent:
         logging.info(f"User query: {user_prompt}")
         query_vector = self.model.encode(user_prompt).tolist()
         results = self.collection.query(query_embeddings = [query_vector], n_results = 1, include = ['documents', 'distances'])
-        if results['distances'][0][0] > 1.0:
+        distance = results['distances'][0][0]
+        if distance > 1.0:
             logging.warning(f"Blocked query (dist: {distance:.2f}): {user_prompt}")
             return "Sorry, I did not find any information about your question."
 
