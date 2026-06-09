@@ -10,13 +10,21 @@
 # 4. Click 'chat' and then 'try it out'
 # ****
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
 from rag_agent import RAGAgent
 
 app = FastAPI()
 agent = RAGAgent()
 
+class ChatRequest(BaseModel):
+    user_prompt:str = Field(..., min_length = 1, max_length = 1000)
+
 @app.post("/chat")
-async def chat(user_prompt:str):
-    response = agent.get_answer(user_prompt)
-    return {"reply": response}
+async def chat(request:ChatRequest):
+    try:
+        response = agent.get_answer(request.user_prompt)
+        return {"reply": response}
+    except Exception as err:
+        logging.error(f"Errors during request processing: {err}")
+        raise HTTPException(status_code = 500, detail = "Internal Server Error")
