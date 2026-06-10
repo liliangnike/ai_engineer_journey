@@ -33,8 +33,11 @@
 # Windows Browser
 - Open Windows cmd and execute "ssh -L 8000:127.0.0.1:8000 username@linux_server_ip"
 - Enter password to login
-- cd 03_engineering
-- Execute "uvicorn api_server:app --host 0.0.0.0 --port 8000 --reload"
+
+## If the service is not active in your linux server,
+## - cd 03_engineering
+## - Execute "uvicorn api_server:app --host 0.0.0.0 --port 8000 --reload"
+
 - Open Microsoft Edge, input "http://127.0.0.1:8000/docs"
 - Click 'chat' and then 'try it out'
 
