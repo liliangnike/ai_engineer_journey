@@ -30,6 +30,9 @@
   sudo systemctl enable rag_agent
   sudo systemctl start rag_agent
 
+- Restart rag_agent
+  sudo systemctl restart rag_agent
+
 # Windows Browser
 - Open Windows cmd and execute "ssh -L 8000:127.0.0.1:8000 username@linux_server_ip"
 - Enter password to login
